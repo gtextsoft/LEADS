@@ -681,15 +681,6 @@
         <p class="form-error" id="rsvpError" role="alert" hidden>Something went wrong sending your request. Please try again, or email <a href="mailto:products@stephenakintayo.com">products@stephenakintayo.com</a>.</p>
         <p class="reg-fineprint">Prefer the official page? <a href="https://www.stephenakintayo.com/leeds" target="_blank" rel="noopener">stephenakintayo.com/leeds</a></p>
       </form>
-
-      <div class="form-success" id="rsvpSuccess">
-        <svg class="seal" style="width:72px;height:72px" viewBox="0 0 64 64" aria-hidden="true">
-          <circle cx="32" cy="32" r="30" fill="none" stroke="#c6a153" stroke-width="1"/>
-          <path d="M22 33 l7 7 l14 -15" fill="none" stroke="#e6d39a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <h3>You're on the list.</h3>
-        <p>Check your inbox — we'll send your confirmation and the venue details shortly. See you in Leeds.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -797,7 +788,6 @@
 
   // RSVP form -> Formspree (AJAX submit, keeps the custom success panel)
   const form = document.getElementById('rsvpForm');
-  const success = document.getElementById('rsvpSuccess');
   const btn = document.getElementById('rsvpBtn');
   const errEl = document.getElementById('rsvpError');
   const btnLabel = btn.innerHTML;
@@ -818,9 +808,11 @@
       });
 
       if (res.ok) {
-        form.style.display = 'none';
-        success.classList.add('show');
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const fname = form.fname.value.trim();
+        if (fname) sessionStorage.setItem('rsvpName', fname);
+        sessionStorage.setItem('rsvpComplete', '1');
+        window.location.href = '/thankyou';
+        return;
       } else {
         // Surface Formspree's field/form error if present
         const data = await res.json().catch(()=>null);

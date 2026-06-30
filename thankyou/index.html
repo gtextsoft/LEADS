@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>You're on the list — Leeds CEOs & Founders' Meet & Greet</title>
+<meta name="description" content="Thank you for registering for An Evening with Dr. Stephen Akintayo in Leeds, 16 August 2026." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a1428;
+    --ink-2:#0b1730;
+    --brass:#c6a153;
+    --brass-bright:#e6d39a;
+    --steel:#eef1f5;
+    --paper:#f2efe7;
+    --slate:#9aa7ba;
+    --slate-dim:#6f7e94;
+    --line-brass:rgba(198,161,83,.30);
+    --line-soft:rgba(255,255,255,.09);
+    --shadow:0 30px 80px -30px rgba(0,0,0,.65);
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    min-height:100vh;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:"Hanken Grotesk",system-ui,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    flex-direction:column;
+  }
+  ::selection{background:var(--brass);color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+
+  .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 28px}
+
+  .eyebrow{
+    font-family:"Spline Sans Mono",monospace;
+    font-size:.72rem;font-weight:500;
+    letter-spacing:.28em;text-transform:uppercase;color:var(--brass);
+  }
+  .display{
+    font-family:"Fraunces",serif;font-weight:500;
+    line-height:1.08;letter-spacing:-.012em;
+  }
+  .seal{width:64px;height:64px;flex:none}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:.6em;
+    font-family:"Hanken Grotesk",sans-serif;
+    font-size:.94rem;font-weight:600;
+    padding:1.02em 1.7em;border-radius:2px;cursor:pointer;
+    transition:transform .35s var(--ease),background .35s var(--ease),box-shadow .35s var(--ease);
+    border:1px solid transparent;
+  }
+  .btn-gold{
+    background:linear-gradient(180deg,var(--brass-bright),var(--brass));
+    color:#241c08;
+    box-shadow:0 14px 34px -16px rgba(198,161,83,.8);
+  }
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 22px 44px -16px rgba(198,161,83,.85)}
+  .btn-ghost{
+    background:transparent;color:var(--paper);
+    border:1px solid var(--line-soft);
+  }
+  .btn-ghost:hover{border-color:var(--brass);color:var(--brass-bright);transform:translateY(-2px)}
+  .btn .arr{transition:transform .35s var(--ease)}
+  .btn:hover .arr{transform:translateX(4px)}
+
+  header.nav{
+    border-bottom:1px solid var(--line-soft);
+    background:rgba(8,17,34,.82);
+    backdrop-filter:blur(14px);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brandmark{display:flex;align-items:center;gap:12px}
+  .brandmark .bm-text{
+    font-family:"Fraunces",serif;font-weight:600;font-size:.98rem;line-height:1.05;
+  }
+  .brandmark .bm-text span{
+    display:block;font-family:"Spline Sans Mono",monospace;font-size:.6rem;
+    letter-spacing:.26em;color:var(--brass);text-transform:uppercase;margin-top:3px;
+  }
+
+  main{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:clamp(60px,10vw,100px) 0;
+    position:relative;
+    overflow:hidden;
+  }
+  main::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(90% 70% at 50% 0%, rgba(36,72,128,.45), transparent 60%),
+      radial-gradient(60% 50% at 80% 80%, rgba(198,161,83,.08), transparent 55%);
+    pointer-events:none;
+  }
+
+  .thank-card{
+    position:relative;z-index:1;
+    max-width:620px;width:100%;
+    text-align:center;
+    background:rgba(8,16,33,.62);
+    border:1px solid var(--line-soft);
+    border-radius:6px;
+    padding:clamp(36px,6vw,56px) clamp(28px,5vw,48px);
+    box-shadow:var(--shadow);
+    animation:fadeUp .7s var(--ease);
+  }
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(18px)}
+    to{opacity:1;transform:none}
+  }
+
+  .thank-card .seal{margin:0 auto 24px}
+  .thank-card h1{
+    font-size:clamp(2rem,5vw,2.8rem);
+    margin-bottom:16px;
+  }
+  .thank-card .lead{
+    color:var(--slate);
+    font-size:1.08rem;
+    line-height:1.7;
+    max-width:42ch;
+    margin:0 auto 32px;
+  }
+
+  .community-box{
+    margin-top:8px;
+    padding:28px 24px;
+    border:1px solid var(--line-brass);
+    border-radius:4px;
+    background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0));
+  }
+  .community-box h2{
+    font-family:"Fraunces",serif;
+    font-size:1.35rem;font-weight:600;
+    margin-bottom:10px;
+  }
+  .community-box p{
+    color:var(--slate-dim);
+    font-size:.95rem;
+    line-height:1.65;
+    max-width:38ch;
+    margin:0 auto 22px;
+  }
+  .community-box .btn-gold{width:100%;justify-content:center}
+
+  .event-recap{
+    margin-top:28px;
+    padding-top:24px;
+    border-top:1px solid var(--line-soft);
+    font-family:"Spline Sans Mono",monospace;
+    font-size:.72rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--brass);
+  }
+  .event-recap span{display:block;margin-top:6px;color:var(--slate-dim);letter-spacing:.12em}
+
+  .actions{
+    display:flex;flex-wrap:wrap;gap:12px;
+    justify-content:center;margin-top:28px;
+  }
+
+  footer{
+    border-top:1px solid var(--line-soft);
+    padding:28px 0;
+    text-align:center;
+    font-family:"Spline Sans Mono",monospace;
+    font-size:.68rem;
+    letter-spacing:.12em;
+    color:var(--slate-dim);
+    text-transform:uppercase;
+  }
+  :focus-visible{outline:2px solid var(--brass-bright);outline-offset:3px;border-radius:2px}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brandmark" href="../" aria-label="Stephen Akintayo Foundation — home">
+      <svg class="seal" style="width:42px;height:42px" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="none" stroke="#c6a153" stroke-width="1"/>
+        <circle cx="32" cy="32" r="24" fill="none" stroke="#c6a153" stroke-width=".6" opacity=".6"/>
+        <text x="32" y="38" text-anchor="middle" fill="#e6d39a" font-size="17" font-weight="600">SA</text>
+      </svg>
+      <span class="bm-text">Stephen Akintayo<span>Foundation</span></span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="display:flex;justify-content:center">
+    <div class="thank-card">
+      <svg class="seal" style="width:80px;height:80px" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="none" stroke="#c6a153" stroke-width="1"/>
+        <path d="M22 33 l7 7 l14 -15" fill="none" stroke="#e6d39a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+
+      <span class="eyebrow">Registration received</span>
+      <h1 class="display" id="thankHeading">You're on the list.</h1>
+      <p class="lead" id="thankLead">Check your inbox — we'll send your confirmation and the venue details shortly. See you in Leeds.</p>
+
+      <div class="community-box">
+        <h2>Join the community</h2>
+        <p>Connect with other founders and CEOs ahead of the evening. Get updates, introductions, and the inside track on what's happening in the room.</p>
+        <a class="btn btn-gold" id="joinCommunity" href="https://wa.me/2348167901719?text=Hi%2C%20I%20registered%20for%20the%20Leeds%20CEOs%20%26%20Founders%27%20Meet%20%26%20Greet%20and%20would%20like%20to%20join%20the%20community." target="_blank" rel="noopener">
+          Join community <span class="arr">→</span>
+        </a>
+      </div>
+
+      <div class="event-recap">
+        16 Aug 2026 · 6:00 PM · Leeds, UK
+        <span>Stephen Akintayo Foundation</span>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-ghost" href="../">Back to event page</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Stephen Akintayo Foundation</div>
+</footer>
+
+<script>
+  const heading = document.getElementById('thankHeading');
+  const lead = document.getElementById('thankLead');
+  const name = sessionStorage.getItem('rsvpName');
+
+  if (name) {
+    heading.textContent = "You're on the list, " + name + ".";
+    lead.textContent = "Check your inbox — we'll send your confirmation and the venue details shortly. While you wait, join the community below. See you in Leeds.";
+  }
+</script>
+</body>
+</html>
