@@ -1601,11 +1601,6 @@
           <div class="form-title">Request your invitation</div>
           <div class="form-note">Takes under a minute. Confirmation by email.</div>
 
-          <!-- Formspree helpers: nicer notification subject + spam honeypot (kept hidden) -->
-          <input type="hidden" name="_subject" value="New Leeds Meet &amp; Greet RSVP">
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
-            style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
-
           <div class="field two">
             <div>
               <label for="fname">First name</label>
@@ -1778,7 +1773,7 @@
       });
     });
 
-    // RSVP form -> Formspree (AJAX submit, keeps the custom success panel)
+    // RSVP form — AJAX submit, then the thank-you page
     const form = document.getElementById('rsvpForm');
     const btn = document.getElementById('rsvpBtn');
     const errEl = document.getElementById('rsvpError');
@@ -1806,12 +1801,6 @@
           window.location.href = '/thankyou';
           return;
         } else {
-          // Surface Formspree's field/form error if present
-          const data = await res.json().catch(() => null);
-          const msg = data && data.errors && data.errors.length
-            ? data.errors.map(e => e.message).join(' ')
-            : null;
-          if (msg) errEl.textContent = msg;
           errEl.hidden = false;
           btn.disabled = false;
           btn.innerHTML = btnLabel;
